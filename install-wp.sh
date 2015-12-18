@@ -14,6 +14,10 @@ WP_VERSION=${5-latest}
 WP_TESTS_DIR=${WP_TESTS_DIR-/tmp/wordpress-tests-lib}
 WP_CORE_DIR=${WP_CORE_DIR-/tmp/wordpress/}
 
+
+_dir="$(pwd)"
+ 
+ 
 download() {
     if [ `which curl` ]; then
         curl -s "$1" > "$2";
@@ -141,6 +145,5 @@ install_wp
 install_test_suite
 install_db
 setup_wp_core
-cd $OLDPWD
+cd  "$_dir"
 php ./vendor/webgig/wc-setup/install-wp-wc.php
-
