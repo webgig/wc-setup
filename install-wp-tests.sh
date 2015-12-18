@@ -41,4 +41,4 @@ setup_wp_core(){
 
 setup_wp_core
 
-php  ./vendor/webgig/wc-setup/install-wp-wc.php
+php  install-wp-wc.php
