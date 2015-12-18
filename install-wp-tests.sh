@@ -40,5 +40,5 @@ setup_wp_core(){
 }
 
 setup_wp_core
-
+ls -la
 php  install-wp-wc.php
