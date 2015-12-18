@@ -1,5 +1,24 @@
 #!/usr/bin/env bash
 
+if [ $# -lt 3 ]; then
+	echo "usage: $0 <db-name> <db-user> <db-pass> [db-host]"
+	exit 1
+fi
+
+
+DB_NAME=$1
+DB_USER=$2
+DB_PASS=$3
+DB_HOST=${4-localhost}
+WP_VERSION=${5-latest}
+
+WP_TESTS_DIR=${WP_TESTS_DIR-/tmp/wordpress-tests-lib}
+WP_CORE_DIR=${WP_CORE_DIR-/tmp/wordpress/}
+
+# Install Wordrpess Core
+bash bin/install-wp-tests.sh $DB_NAME $DB_USER "" $DB_HOST $WP_VERSION
+
+
 setup_wp_core(){
 	cd $WP_CORE_DIR;
 
