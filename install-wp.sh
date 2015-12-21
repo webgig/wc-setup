@@ -146,4 +146,4 @@ install_test_suite
 install_db
 setup_wp_core
 cd  "$_dir"
-php ./vendor/webgig/wc-setup/install-wp-wc.php
+php ./vendor/webgig/wc-setup/install-wp-core.php
