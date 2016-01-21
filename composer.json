@@ -1,5 +1,8 @@
 {
     "name": "webgig/wc-setup",
+    "bin": [
+		 "bin/wc-setup"
+	],
     "authors": [
         {
             "name": "Sagar Bhandari",
