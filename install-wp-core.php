@@ -63,4 +63,4 @@ if ( "1" == getenv( 'WP_MULTISITE' ) ||
 require_once( $_tests_dir. '/includes/mock-mailer.php' );
 $phpmailer = new MockPHPMailer();
 system( WP_PHP_BINARY . ' ' . escapeshellarg( $_tests_dir . '/includes/install.php' ) . ' ' . escapeshellarg( $config_file_path ) . ' ' . $multisite );
-shell_exec("./vendor/wp-cli/wp-cli/bin/wp plugin install woocommerce --path='$_wp_core_dir' --activate");
+//shell_exec("./vendor/wp-cli/wp-cli/bin/wp plugin install woocommerce --path='$_wp_core_dir' --activate");
